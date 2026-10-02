@@ -12,7 +12,8 @@ import net.minecraft.world.item.ItemStack;
 public final class AHSetClient implements ClientModInitializer {
     private boolean enabled;
     private long price;
-    private int cooldown;\n    private static final int SELL_INTERVAL_TICKS = 24;
+    private int cooldown;
+    private static final int SELL_INTERVAL_TICKS = 24;
 
     @Override
     public void onInitializeClient() {
@@ -44,9 +45,6 @@ public final class AHSetClient implements ClientModInitializer {
 
     private void tick(Minecraft client) {
         if (!enabled || client.player == null || client.level == null || client.getConnection() == null) {
-            return;
-        }
-        if (client.gui.screen() != null) {
             return;
         }
         if (cooldown > 0) {
