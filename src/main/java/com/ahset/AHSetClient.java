@@ -12,7 +12,7 @@ import net.minecraft.world.item.ItemStack;
 public final class AHSetClient implements ClientModInitializer {
     private boolean enabled;
     private long price;
-    private int cooldown;
+    private int cooldown;\n    private static final int SELL_INTERVAL_TICKS = 24;
 
     @Override
     public void onInitializeClient() {
@@ -60,6 +60,6 @@ public final class AHSetClient implements ClientModInitializer {
             return;
         }
         client.getConnection().sendCommand("ah sell " + price);
-        cooldown = 20;
+        cooldown = SELL_INTERVAL_TICKS;
     }
 }
