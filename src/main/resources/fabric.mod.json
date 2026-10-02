@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "ahset",
+  "version": "${version}",
+  "name": "AHSet",
+  "description": "Automatically sells the main-hand item through /ah.",
+  "authors": ["avishyant7"],
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.ahset.AHSetClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.2",
+    "fabric-api": ">=0.152.1+26.2"
+  }
+}
